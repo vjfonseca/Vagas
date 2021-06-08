@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Vagas.Data;
+using Westwind.AspNetCore.LiveReload;
 
 namespace Vagas
 {
@@ -26,6 +27,8 @@ namespace Vagas
         {
             services.AddControllersWithViews();
             services.AddScoped<IRepo, MockRepo>();
+            
+            services.AddLiveReload();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -54,6 +57,10 @@ namespace Vagas
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            app.UseStaticFiles();
+
+            app.UseLiveReload();
         }
     }
 }

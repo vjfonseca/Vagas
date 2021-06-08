@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "T2KcLfohospk+Pw0wWxfG5pTaTAQoECroYqoBDqvRiW54UVGQmjH7QGqVw1nuAWcXprcTvm/wQ19IbS0/yZSLA==",
+  "dgSpecHash": "YXttgG5x90PsWYahJd488K1dd7g6azQ9jj0lVpiNqqQo70lRxI5Gzs6B5t2MU72nFfKQe0EV3X3xUpXq8AfMgA==",
   "success": true,
   "projectFilePath": "C:\\arquivos\\estudo\\projetos\\empregare\\Vagas\\Vagas.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\victo\\.nuget\\packages\\westwind.aspnetcore.livereload\\0.3.2\\westwind.aspnetcore.livereload.0.3.2.nupkg.sha512"
+  ],
   "logs": []
 }
