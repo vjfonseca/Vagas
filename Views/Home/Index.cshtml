@@ -5,44 +5,41 @@
 @* <div class="text-center">
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div> *@
+    </div> *@
 
 
 @model IEnumerable<Vaga>
 @{
     ViewData["Title"] = "Vagas";
 }
-
-<div container>
-    <nav class="row pt-4">
-        <h1 class=col-6>Categorias</h1>
-        @* <a asp-controller=Vaga asp-action=Create class="text-rigth col-6 btn btn-primary">Criar</a> *@
-    </nav>
-    <table class="table" title="Categorias">
-        <thead>
-            <tr>
-                <th scope="col">#</th>
-                <th scope="col">Titulo</th>
-                <th scope="col">Localizacao</th>
-                <th scope="col">Salario</th>
-            </tr>
-        </thead>
-        <tbody>
+<div class="container d-flex justify-content-around align-items-center row">
+    <span class="align-middle col-lg-6">
+        <h6 style="font-weight: 400;">SOLUÇÕES PARA</h6>
+        <h1 class="text-secondary" style="font-weight: 800;">CANDIDATOS</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+            Expedita, consectetur. Tempore optio quae dolore. </p>
+        <button type="button" class="px-5 my-4 py-2 btn btn-primary btn"
+            style="border-radius: 5%; font-weight: 500">CADASTRE-SE</button>
+    </span>
+    <img src="~/images/destaque.png" class="mh-100 col-lg-6" alt="My image"/>
+</div>
+<div class="bg-primary">
+    <div class="text-white text-center py-5">
+        <h3 class="d-inline-block mb-5">Confira nossas vagas disponíveis</h3>
+        <span class="px-4 d-flex flex-wrap justify-content-start">
             @foreach (Vaga vaga in Model)
             {
-                <tr>
-                    <td width="30%">@vaga.Id</td>
-                    <td width="30%">@vaga.Titulo</td>
-                    <td width="30%">@vaga.Localizacao</td>
-                    <td width="50%">@vaga.Salario</td>
-                    @* <td class="text-center">
-                        <div class="w-75 btn-group" role="group">
-                            <a asp-action="Edit" asp-route-Id="@cat.Id" class="btn btn-warning mx-2">Editar</a>
-                            <a asp-action="Delete" asp-route-Id="@cat.Id" class="btn btn-danger">Excluir</a>
-                        </div>
-                    </td> *@
-                </tr>
+                <span class="my-4 mx-5 text-left" style="width: 190px;" overflow=hidden>
+                    <h5>@vaga.Titulo</h5>
+                    <div><i class="fas fa-map-marker-alt"></i> @vaga.Localizacao</div>
+                    <div><i class="fas fa-money-bill-wave"></i> R$ @vaga.Salario</div>
+                </span>
             }
-        </tbody>
-    </table>
+        </span>
+    </div>
+</div>
+<div class="text-center align-middle my-5">
+    <h3 class="my-5 text-secondary">Faça parte você também</h3>
+    <button type="button" class="mx-5 px-5 py-3 btn btn-primary btn-lg font-weight-bold"
+        style="border-radius: 5%">CADASTRE-SE</button>
 </div>
