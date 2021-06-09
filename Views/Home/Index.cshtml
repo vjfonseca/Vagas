@@ -12,34 +12,51 @@
 @{
     ViewData["Title"] = "Vagas";
 }
-<div class="container d-flex justify-content-around align-items-center row">
-    <span class="align-middle col-lg-6">
-        <h6 style="font-weight: 400;">SOLUÇÕES PARA</h6>
-        <h1 class="text-secondary" style="font-weight: 800;">CANDIDATOS</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-            Expedita, consectetur. Tempore optio quae dolore. </p>
-        <button type="button" class="px-5 my-4 py-2 btn btn-primary btn"
-            style="border-radius: 5%; font-weight: 500">CADASTRE-SE</button>
-    </span>
-    <img src="~/images/destaque.png" class="mh-100 col-lg-6" alt="My image"/>
-</div>
-<div class="bg-primary">
-    <div class="text-white text-center py-5">
-        <h3 class="d-inline-block mb-5">Confira nossas vagas disponíveis</h3>
-        <span class="px-4 d-flex flex-wrap justify-content-start">
-            @foreach (Vaga vaga in Model)
-            {
-                <span class="my-4 mx-5 text-left" style="width: 190px;" overflow=hidden>
-                    <h5>@vaga.Titulo</h5>
-                    <div><i class="fas fa-map-marker-alt"></i> @vaga.Localizacao</div>
-                    <div><i class="fas fa-money-bill-wave"></i> R$ @vaga.Salario</div>
-                </span>
-            }
+<div class="container">
+    <div class="d-flex justify-content-around align-items-center row">
+        <span class="align-middle col-lg-6">
+            <h6 style="font-weight: 400;">SOLUÇÕES PARA</h6>
+            <h1 style="font-weight: bold; color:rgb(87,89,91)">CANDIDATOS</h1>
+            <p style="font-weight: 400;">Amplie suas possibilidades! Cadastre seu currículo e aproveite os recursos
+                exclusivos que
+                disponibilizamos para você gratuitamente</p>
+            <button type="button" class="px-5 my-4 py-2 btn btn-primary btn"
+                style="border-radius: 5%; font-weight: 500">CADASTRE-SE</button>
         </span>
+        <img src="~/images/destaque.png" class="mh-100 col-lg-6" alt="My image" />
     </div>
+
 </div>
-<div class="text-center align-middle my-5">
-    <h3 class="my-5 text-secondary">Faça parte você também</h3>
-    <button type="button" class="mx-5 px-5 py-3 btn btn-primary btn-lg font-weight-bold"
-        style="border-radius: 5%">CADASTRE-SE</button>
+
+<span class="container-fluid">
+    <div class="bg-primary">
+        <div class="text-white text-center py-5">
+            <div class="container">
+                <h1 class="mb-sm-5">Confira nossas vagas disponíveis</h1>
+            </div>
+
+            <div class="container">
+                <span class="d-flex flex-wrap justify-content-between">
+                    @foreach (Vaga vaga in Model)
+                    {
+                        <span class="my-4 text-left align-self-sm-center col-6 col-md-4 col-lg-3" overflow=hidden>
+                            <h5>@vaga.Titulo</h5>
+                            <div><i class="fas fa-map-marker-alt"></i> @vaga.Localizacao</div>
+                            <div><i class="fas fa-money-bill-wave"></i> R$ @vaga.Salario</div>
+                        </span>
+                    }
+                </span>
+            </div>
+
+
+        </div>
+    </div>
+</span>
+
+<div class="container">
+    <div class="text-center align-middle my-5">
+        <h3 class="my-5 text-secondary">Faça parte você também</h3>
+        <button type="button" class="mx-5 px-5 py-3 btn btn-primary btn-lg font-weight-bold"
+            style="border-radius: 5%">CADASTRE-SE</button>
+    </div>
 </div>

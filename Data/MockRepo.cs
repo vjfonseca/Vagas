@@ -11,7 +11,7 @@ namespace Vagas.Data
         private List<Vaga> _data;
         public MockRepo()
         {
-            _data = Seed(new Random().Next(8, 8));
+            _data = Seed(new Random().Next(8,8));
         }
         private List<Vaga> Seed(int n)
         {
@@ -19,7 +19,14 @@ namespace Vagas.Data
             string cargo = "Desenvolvedor Arquiteto Programador Assistente Engenheiro";
             string tec = "Asp.net C# Java Backend Frontend Fullstack Angular React";
             string cidades = "Barueri-SP Salvador-BA Brasilia-DF Recife-PE Marilia-SP Betim-MG";
-            for (int i = 0; i < n; i++)
+            output.Add(new Vaga()
+            {
+                Id = 1,
+                Titulo = "Vendedor Externo",
+                Localizacao = "São José do Rio Preto",
+                Salario = 2000
+            });
+            for (int i = 1; i < n + 1; i++)
             {
                 output.Add(new Vaga()
                 {
@@ -33,7 +40,7 @@ namespace Vagas.Data
         }
         private static string GetRandomWords(string data, int x)
         {
-           // Split data into words.
+            // Split data into words.
             var words = data.Split(' ');
             // Find a random place to start, at least x words back.
             Random random = new Random();
