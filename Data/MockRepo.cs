@@ -11,7 +11,7 @@ namespace Vagas.Data
         private List<Vaga> _data;
         public MockRepo()
         {
-            _data = Seed(new Random().Next(8,8));
+            _data = Seed(new Random().Next(9,10));
         }
         private List<Vaga> Seed(int n)
         {
