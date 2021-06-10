@@ -39,4 +39,3 @@ C:\arquivos\estudo\projetos\empregare\Vagas\obj\Debug\net5.0\Vagas.pdb
 C:\arquivos\estudo\projetos\empregare\Vagas\obj\Debug\net5.0\Vagas.genruntimeconfig.cache
 C:\arquivos\estudo\projetos\empregare\Vagas\obj\Debug\net5.0\Vagas.csproj.CopyComplete
 C:\arquivos\estudo\projetos\empregare\Vagas\bin\Debug\net5.0\Westwind.AspNetCore.LiveReload.dll
-C:\arquivos\estudo\projetos\empregare\Vagas\obj\Debug\net5.0\Razor\Views\Home\LayoutOriginalIndex.cshtml.g.cs

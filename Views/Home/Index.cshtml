@@ -2,12 +2,6 @@
     ViewData["Title"] = "Home Page";
 }
 
-@* <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-    </div> *@
-
-
 @model IEnumerable<Vaga>
 @{
     ViewData["Title"] = "Vagas";
@@ -18,14 +12,12 @@
             <h6 style="font-weight: 400;">SOLUÇÕES PARA</h6>
             <h1 style="font-weight: bold; color:rgb(87,89,91)">CANDIDATOS</h1>
             <p style="font-weight: 400;">Amplie suas possibilidades! Cadastre seu currículo e aproveite os recursos
-                exclusivos que
-                disponibilizamos para você gratuitamente</p>
-            <button type="button" class="px-5 my-4 py-2 btn btn-primary btn"
+                exclusivos que disponibilizamos para você gratuitamente</p>
+            <button type="button" class="px-4 my-4 py-2 btn btn-primary btn"
                 style="border-radius: 5%; font-weight: 500">CADASTRE-SE</button>
         </span>
-        <img src="~/images/destaque.png" class="mh-100 col-lg-6" alt="My image" />
+        <img src="~/images/destaque.png" class="mh-100 col-lg-6" alt="destaque" />
     </div>
-
 </div>
 
 <span class="container-fluid">
@@ -34,7 +26,6 @@
             <div class="container">
                 <h1 class="mb-sm-5">Confira nossas vagas disponíveis</h1>
             </div>
-
             <div class="container">
                 <span class="d-flex flex-wrap justify-content-between">
                     @foreach (Vaga vaga in Model)
@@ -47,8 +38,6 @@
                     }
                 </span>
             </div>
-
-
         </div>
     </div>
 </span>

@@ -11,22 +11,39 @@
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 
+<style>
+    .navbar-nav,
+    .mr-auto {
+        flex: 1;
+        margin: auto !important;
+        display: flex;
+    }
+</style>
+
 <body style="background-color: rgb(255,255,255);">
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-white justify-content-between shadow-lg p-3 mb-5">
-            <img src="~/images/logo.png" class="navbar-brand" alt="My image" />
-            <span>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
-                    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+
+        <nav class="mb-5 navbar navbar-expand-lg navbar-light bg-light shadow d-flex justify-content-between">
+            <span class="col-8">
+                <a class="navbar-brand" href="#"> <img class="img-fluid" src="~/images/logo.png" alt="logo" /></a>
+            </span>
+            <span class="">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav d-flex justify-content-around mx-4">
-                        <button type="button"
-                            class="px-4 py-2 mx-4 btn btn-primary font-weight-bold rounded">CADASTRE-SE</button>
-                        <a class="nav-item nav-link font-weight-bold mx-4" href="#">LOGIN</a>
-                    </div>
-                </div>
+            </span>
+            <span class="mr-lg-3 my-3 collapse text-center navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav d-flex justify-content-end align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <button type="button" class="mr-lg-4 px-4 py-2 btn btn-primary font-weight-bold rounded">CADASTRE-SE</button>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="ml-xlg-2 mr-lg-5 nav-item nav-link font-weight-bold" href="#">LOGIN</a>
+                    </li>
+                </ul>
             </span>
         </nav>
     </header>
